@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+<rect width="800" height="800" fill="#ffffff"/>
+<rect x="80" y="80" width="640" height="640" rx="8" fill="#fbfaf7" stroke="#d9d4cc" stroke-width="2"/>
+<circle cx="400" cy="330" r="115" fill="none" stroke="#171512" stroke-width="10"/>
+<circle cx="400" cy="330" r="55" fill="#f2efe9" stroke="#746f68" stroke-width="3"/>
+<text x="400" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" letter-spacing="5" fill="#171512">OUTDOOR</text>
+<text x="400" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#746f68">Outdoor luminaire</text>
+</svg>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KEUS · LIGHTING-CATALOGUE</title>
+<link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="preconnect" href="https://wsrv.nl" crossorigin>
+  <link rel="dns-prefetch" href="//wsrv.nl">
+  <link rel="preconnect" href="https://i.ibb.co" crossorigin>
+</head>
+<body>
+<div class="keus-page-loader" id="keusPageLoader" aria-hidden="true">
+  <div class="keus-loader-inner">
+    <img class="keus-loader-logo" src="./assets/keus-logo.svg" alt="">
+    <div class="keus-loader-line"><span></span></div>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand brand-logo-link" href="./index.html" aria-label="Go to catalogue home"><img class="brand-logo" src="./assets/keus-logo.svg" alt="KEUS"></a>
+    <div class="top-meta"><span>LIGHTING-CATALOGUE</span></div>
+    <div class="top-actions">
+      <button class="header-search-btn" id="headerSearchBtn" type="button" aria-label="Search catalogue">
+        <span class="header-search-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<main class="shell">
+  <div id="categoryTitle" hidden>Down Lights</div>
+  <div id="status" hidden></div>
+
+  <nav class="category-tabs" id="categoryTabs" aria-label="Lighting categories">
+    <button class="category-tab active" type="button" data-category="downlights">
+      <span class="cat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/></svg>
+      </span>
+      <span>Downlights</span>
+    </button>
+    <button class="category-tab" type="button" data-category="tracklights">
+      <span class="cat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 5h16M13 5v4l-4 3 4 7 5-3-4-7"/><circle cx="13.5" cy="15.5" r="1.2"/></svg>
+      </span>
+      <span>Tracklights</span>
+    </button>
+    <button class="category-tab" type="button" data-category="profiles">
+      <span class="cat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16"/><path d="M8 17 16 7M8 7v10h8"/></svg>
+      </span>
+      <span>Profiles</span>
+    </button>
+    <button class="category-tab" type="button" data-category="outdoor">
+      <span class="cat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 3h6l3 5H6l3-5ZM8 8h8l-1 13h-6L8 8Z"/><path d="M8 13h8"/></svg>
+      </span>
+      <span>Outdoor Lights</span>
+    </button>
+  </nav>
+
+  <section class="filter-shell" aria-label="Catalogue filters">
+    <div class="toolbar">
+      <input class="field search" id="searchBox" type="search" placeholder="Search product, item no., stock code or specification…" />
+      <div class="mobile-product-label">Select Product</div>
+      <select class="field product-main native-product-select" id="nameFilter" data-field="name" aria-hidden="true" tabindex="-1"><option value="">All products</option></select>
+      <div class="keus-product-select" id="keusProductSelect">
+        <button class="keus-product-trigger" id="keusProductTrigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <span id="keusProductTriggerText">All products</span><span class="keus-product-chevron" aria-hidden="true"></span>
+        </button>
+        <div class="keus-product-menu" id="keusProductMenu" role="listbox" aria-label="All products" hidden></div>
+      </div>
+      <select class="field" id="cctFilter" data-field="cct"><option value="">All CCT</option></select>
+      <select class="field watt-main" id="wattageFilter" data-field="wattage"><option value="">All wattages</option></select>
+      <button class="btn more-btn" id="moreBtn" type="button">More Filters</button>
+    </div>
+    <div class="advanced" id="advancedFilters">
+      <select class="field" id="itemNoFilter" data-field="itemNo"><option value="">All item nos.</option></select>
+      <select class="field" id="vfFilter" data-field="vf"><option value="">All Vf</option></select>
+      <select class="field" id="imaxFilter" data-field="imax"><option value="">All Imax</option></select>
+      <select class="field" id="criFilter" data-field="cri"><option value="">All CRI</option></select>
+      <select class="field" id="cutoutFilter" data-field="cutout"><option value="">All cutouts</option></select>
+      <select class="field" id="beamFilter" data-field="beam"><option value="">All beam angles</option></select>
+      <select class="field" id="batchCodeFilter" data-field="batchCode"><option value="">All batch codes</option></select>
+      <select class="field" id="stockCodeFilter" data-field="stockCode"><option value="">All stock codes</option></select>
+      <select class="field" id="bisNoFilter" data-field="bisNo"><option value="">All BIS nos.</option></select>
+      <select class="field" id="bisSpecFilter" data-field="bisSpec"><option value="">All BIS SEC</option></select>
+      <select class="field" id="mrpFilter" data-field="mrp"><option value="">All MRP</option></select>
+      <select class="field" id="mfgByFilter" data-field="mfgBy"><option value="">All manufacturers</option></select>
+      <button class="btn reset-btn" id="resetBtn" type="button">Reset All</button>
+    </div>
+    <div class="finish-panel"><div class="finish-title">Finish</div><div class="finish-chips" id="finishChips"></div></div>
+    <div class="active-filters" id="activeFilters"></div>
+  </section>
+
+  <div class="catalogue-head"><h2>Product Collection</h2><div class="catalogue-count" id="catalogueCount">0 products</div></div>
+  <section class="grid" id="grid"></section>
+  <div class="pagination" id="pagination" hidden><button class="btn" id="prevBtn" type="button">Previous</button><div class="page-info" id="pageInfo"></div><button class="btn" id="nextBtn" type="button">Next</button></div>
+  <footer class="footer"><span>KEUS</span><span>Smart Living · Product Catalogue</span></footer>
+</main>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+  <div class="modal-panel">
+    <div class="modal-top"><div class="modal-brand">KEUS</div><button class="close-btn" id="closeBtn" type="button" aria-label="Close">×</button></div>
+    <div class="detail-wrap">
+      <div class="visual-col">
+        <div class="main-image"><img id="detailImage" alt="" /></div>
+        <div class="detail-finishes"><div class="detail-finish-label">Available Finishes</div><div class="finish-options" id="detailFinishOptions"></div></div>
+        <div class="thumbs" id="thumbs"></div><div class="finish-note" id="finishNote"></div>
+      </div>
+      <div class="info-col"><div class="detail-kicker" id="detailKicker"></div><h2 class="detail-title" id="detailTitle"></h2><div class="detail-sub" id="detailSub"></div><div class="spec-grid" id="specGrid"></div></div>
+    </div>
+    <div class="variants">
+      <div class="variants-head"><h3>Available Variants</h3><div class="variant-filter-note" id="variantFilterNote"></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Finish</th><th>CCT</th><th>Vf</th><th>Imax</th><th>CRI</th><th>Cutout</th><th>Beam Angle</th><th>Wattage</th><th>Batch Code</th><th>Item No.</th><th>Stock Code</th><th>BIS No</th><th>BIS SEC</th><th>MRP</th><th>MFG BY</th></tr></thead><tbody id="variantBody"></tbody></table></div>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/js/app.js" defer></script>
+</body>
+</html>
