@@ -12,3 +12,40 @@ button,input,select{font:inherit}button{cursor:pointer}.keus-page-loader{display
 .modal{position:fixed;inset:0;z-index:200;display:none;padding:24px;overflow:auto;background:rgba(0,0,0,.78)}.modal.open{display:block}.modal-panel{width:min(1180px,100%);margin:18px auto;background:#0d1010;border:1px solid #303433;box-shadow:0 30px 90px rgba(0,0,0,.5)}.modal-top{height:62px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2d3130}.modal-brand{letter-spacing:.28em;color:#ddd}.close-btn{width:36px;height:36px;border:1px solid #343938;border-radius:50%;background:transparent;color:#aaa;font-size:22px}.detail-wrap{display:grid;grid-template-columns:.9fr 1.1fr}.visual-col{padding:28px;border-right:1px solid #2d3130}.main-image{aspect-ratio:1;display:grid;place-items:center;background:#151818}.main-image img{width:84%;height:84%;object-fit:contain}.info-col{padding:32px}.detail-kicker,.detail-sub,.finish-note{color:#777b79;font-size:11px}.detail-title{margin:8px 0 10px;font-size:38px;font-weight:300;color:#e4e4e2}.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #303433;border-left:1px solid #303433}.spec-cell{padding:12px;border-right:1px solid #303433;border-bottom:1px solid #303433}.spec-label{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#6d716f}.spec-value{margin-top:5px;font-size:12px;color:#b9bbb9}.variants{padding:0 32px 32px}.variants h3{font-size:18px;font-weight:400}.table-wrap{overflow:auto;border:1px solid #303433}table{border-collapse:collapse;width:100%;min-width:1300px;background:#0c0f0f}th,td{padding:9px 10px;border-right:1px solid #272b2a;border-bottom:1px solid #272b2a;white-space:nowrap;text-align:left}th{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#777b79;font-weight:400}td{font-size:10px;color:#aaa}.detail-finishes{margin-top:14px}.finish-options,.thumbs{display:flex;gap:8px;flex-wrap:wrap}.finish-option,.thumb{border:1px solid #343938;background:#111414;color:#999}.thumb{width:60px;height:60px;padding:4px}.thumb img{width:100%;height:100%;object-fit:contain}
 @media(max-width:900px){.shell{width:calc(100% - 28px)}.topbar-inner{min-height:66px;padding:0 18px}.brand-logo{width:112px}.top-meta{font-size:8px}.category-tabs{height:58px;gap:0}.category-tab{justify-content:center;padding:0 3px;gap:5px;font-size:9px}.cat-icon{width:20px}.cat-icon svg{width:19px;height:19px}.toolbar{grid-template-columns:1fr;gap:7px}.field,.keus-product-trigger,.more-btn{height:44px}.advanced.open{max-height:900px}.advanced{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.finish-panel{display:block;padding-top:14px}.finish-title{padding:0 0 9px}.finish-chips{flex-wrap:nowrap;overflow-x:auto;gap:14px;padding:5px 5px 8px;scrollbar-width:none}.finish-chips::-webkit-scrollbar{display:none}.finish-chip{flex:0 0 auto}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 9px}.catalogue-head{padding:18px 0 12px}.catalogue-head h2{font-size:14px}.catalogue-count{font-size:8px}.card-image{aspect-ratio:1/1}.card-image img{width:88%;height:88%}.card-body{padding:9px 3px 0!important}.card-title{font-size:12px}.card-price{font-size:10px}.mini-value{font-size:8.5px}.mini-label{font-size:6.5px}.detail-wrap{grid-template-columns:1fr}.visual-col{border-right:0;border-bottom:1px solid #2d3130}}
 @media(max-width:520px){.top-actions{display:none}.shell{width:calc(100% - 20px);padding-top:8px}.category-tabs{height:56px}.category-tab{flex-direction:column;gap:3px;font-size:8px}.filter-shell{padding-top:10px}.toolbar{grid-template-columns:1fr!important}.search,.keus-product-select,.more-btn{grid-column:1!important}.advanced{grid-template-columns:repeat(2,minmax(0,1fr));padding-left:10px;padding-right:10px}.advanced.open{padding:14px 10px}.filter-control>span{font-size:9px}.advanced .field{height:38px;font-size:10px;padding:0 8px}.reset-btn{grid-column:1/-1;text-align:center}.catalogue-head h2{letter-spacing:.18em}.series-variant-badge,.match-tag{font-size:7px;padding:4px 6px}.modal{padding:0}.modal-panel{margin:0;min-height:100vh}.info-col,.visual-col,.variants{padding:16px}.detail-title{font-size:28px}.spec-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== CLIENT-READY MOCKUP MATCH OVERRIDES ===== */
+/* Custom technical dropdowns: native selects remain data controls only. */
+.keus-filter-select{position:relative;min-width:0;width:100%}
+.keus-filter-native{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;overflow:hidden!important;white-space:nowrap!important}
+.keus-filter-trigger{width:100%;height:42px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 13px;border:1px solid #343938;border-radius:2px;background:#0f1212;color:#b7bab8;font:400 12px/1.2 Inter,Arial,sans-serif;text-align:left;box-shadow:none;cursor:pointer}
+.keus-filter-trigger:hover,.keus-filter-select.open .keus-filter-trigger{border-color:#555b59;background:#121616;color:#dedfdd}
+.keus-filter-trigger-text{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.keus-filter-chevron{flex:0 0 7px;width:7px;height:7px;border-right:1px solid #777c7a;border-bottom:1px solid #777c7a;transform:rotate(45deg);margin-top:-4px}
+.keus-filter-select.open .keus-filter-chevron{transform:rotate(225deg);margin-top:4px}
+.keus-filter-menu{position:absolute;z-index:300;top:calc(100% + 5px);left:0;right:0;max-height:260px;overflow:auto;padding:5px;background:#101313;border:1px solid #3b403f;border-radius:2px;box-shadow:0 18px 45px rgba(0,0,0,.48);scrollbar-width:thin;scrollbar-color:#454a48 #101313}
+.keus-filter-menu[hidden]{display:none!important}
+.keus-filter-option{width:100%;min-height:34px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 9px;border:0;border-bottom:1px solid #1d2120;background:transparent;color:#989c99;font:400 11px/1.25 Inter,Arial,sans-serif;text-align:left;cursor:pointer}
+.keus-filter-option:last-child{border-bottom:0}.keus-filter-option:hover{background:#181c1b;color:#e0e1df}.keus-filter-option.active{color:#e4e4e2;background:#151918}.keus-filter-option i{width:7px;height:7px;border-radius:50%;border:1px solid #696e6c}.keus-filter-option.active i{background:#c7c8c4;border-color:#c7c8c4}
+
+/* The approved mockup uses eight useful technical filters, not a wall of fields. */
+.filter-control:has(#vfFilter),.filter-control:has(#imaxFilter),.filter-control:has(#batchCodeFilter),.filter-control:has(#bisNoFilter),.filter-control:has(#bisSpecFilter),.filter-control:has(#mfgByFilter){display:none!important}
+.advanced.open{max-height:330px!important;overflow:visible!important;padding:18px!important;gap:14px 18px!important}
+.filter-control>span{margin-bottom:7px!important;color:#9da09e!important;font-size:11px!important;font-weight:400!important}
+.reset-btn{grid-column:4;justify-self:end;width:auto!important;min-width:100px;height:34px!important;border:0!important;background:transparent!important;color:#7f8381!important;font-weight:400!important}
+
+/* Product-first composition. */
+.catalogue-head{padding-top:24px!important}.catalogue-head h2{font-weight:400!important}.catalogue-count{color:#777b79!important}
+.grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:32px 24px!important}
+
+@media(max-width:900px){
+  .toolbar{grid-template-columns:1fr!important}
+  .advanced.open{max-height:620px!important;padding:14px!important;gap:12px!important}
+  .reset-btn{grid-column:1/-1;justify-self:center}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:520px){
+  .keus-filter-trigger{height:38px;padding:0 9px;font-size:10px}
+  .keus-filter-menu{max-height:220px}
+  .keus-filter-option{min-height:32px;font-size:10px}
+  .advanced.open{overflow:visible!important}
+}
