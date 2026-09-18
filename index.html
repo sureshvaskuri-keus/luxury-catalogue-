@@ -70,33 +70,32 @@
         </button>
         <div class="keus-product-menu" id="keusProductMenu" role="listbox" aria-label="All products" hidden></div>
       </div>
-      <select class="field" id="cctFilter" data-field="cct"><option value="">All CCT</option></select>
-      <select class="field watt-main" id="wattageFilter" data-field="wattage"><option value="">All wattages</option></select>
       <button class="btn more-btn" id="moreBtn" type="button">More Filters</button>
     </div>
     <div class="advanced" id="advancedFilters">
-      <select class="field" id="itemNoFilter" data-field="itemNo"><option value="">All item nos.</option></select>
-      <select class="field" id="vfFilter" data-field="vf"><option value="">All Vf</option></select>
-      <select class="field" id="imaxFilter" data-field="imax"><option value="">All Imax</option></select>
-      <select class="field" id="criFilter" data-field="cri"><option value="">All CRI</option></select>
-      <select class="field" id="cutoutFilter" data-field="cutout"><option value="">All cutouts</option></select>
-      <select class="field" id="beamFilter" data-field="beam"><option value="">All beam angles</option></select>
-      <select class="field" id="batchCodeFilter" data-field="batchCode"><option value="">All batch codes</option></select>
-      <select class="field" id="stockCodeFilter" data-field="stockCode"><option value="">All stock codes</option></select>
-      <select class="field" id="bisNoFilter" data-field="bisNo"><option value="">All BIS nos.</option></select>
-      <select class="field" id="bisSpecFilter" data-field="bisSpec"><option value="">All BIS SEC</option></select>
-      <select class="field" id="mrpFilter" data-field="mrp"><option value="">All MRP</option></select>
-      <select class="field" id="mfgByFilter" data-field="mfgBy"><option value="">All manufacturers</option></select>
-      <button class="btn reset-btn" id="resetBtn" type="button">Reset All</button>
+      <label class="filter-control"><span>CCT</span><select class="field" id="cctFilter" data-field="cct"><option value="">All CCT</option></select></label>
+      <label class="filter-control"><span>Wattage</span><select class="field" id="wattageFilter" data-field="wattage"><option value="">All wattages</option></select></label>
+      <label class="filter-control"><span>CRI</span><select class="field" id="criFilter" data-field="cri"><option value="">All CRI</option></select></label>
+      <label class="filter-control"><span>Beam Angle</span><select class="field" id="beamFilter" data-field="beam"><option value="">All beams</option></select></label>
+      <label class="filter-control"><span>Item No.</span><select class="field" id="itemNoFilter" data-field="itemNo"><option value="">All item nos.</option></select></label>
+      <label class="filter-control"><span>Cutout Size</span><select class="field" id="cutoutFilter" data-field="cutout"><option value="">All cutouts</option></select></label>
+      <label class="filter-control"><span>Stock Code</span><select class="field" id="stockCodeFilter" data-field="stockCode"><option value="">All stock codes</option></select></label>
+      <label class="filter-control"><span>MRP</span><select class="field" id="mrpFilter" data-field="mrp"><option value="">All MRP</option></select></label>
+      <label class="filter-control"><span>Vf</span><select class="field" id="vfFilter" data-field="vf"><option value="">All Vf</option></select></label>
+      <label class="filter-control"><span>Imax</span><select class="field" id="imaxFilter" data-field="imax"><option value="">All Imax</option></select></label>
+      <label class="filter-control"><span>Batch Code</span><select class="field" id="batchCodeFilter" data-field="batchCode"><option value="">All batch codes</option></select></label>
+      <label class="filter-control"><span>BIS No.</span><select class="field" id="bisNoFilter" data-field="bisNo"><option value="">All BIS nos.</option></select></label>
+      <label class="filter-control"><span>BIS SEC</span><select class="field" id="bisSpecFilter" data-field="bisSpec"><option value="">All BIS SEC</option></select></label>
+      <label class="filter-control"><span>Manufacturer</span><select class="field" id="mfgByFilter" data-field="mfgBy"><option value="">All manufacturers</option></select></label>
+      <button class="btn reset-btn" id="resetBtn" type="button">Reset Filters</button>
     </div>
     <div class="finish-panel"><div class="finish-title">Finish</div><div class="finish-chips" id="finishChips"></div></div>
     <div class="active-filters" id="activeFilters"></div>
   </section>
 
-  <div class="catalogue-head"><h2>Product Collection</h2><div class="catalogue-count" id="catalogueCount">0 products</div></div>
+  <div class="catalogue-head"><h2 id="collectionTitle">DOWNLIGHTS</h2><div class="catalogue-count" id="catalogueCount">0 products</div></div>
   <section class="grid" id="grid"></section>
   <div class="pagination" id="pagination" hidden><button class="btn" id="prevBtn" type="button">Previous</button><div class="page-info" id="pageInfo"></div><button class="btn" id="nextBtn" type="button">Next</button></div>
-  <footer class="footer"><span>KEUS</span><span>Smart Living · Product Catalogue</span></footer>
 </main>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
